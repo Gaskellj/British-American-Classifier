@@ -8,20 +8,21 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 Complete this file for part 1 of the project.
 """
 
-
 def create_labels(readFile, writeFile, label):
-    writeFile.write("WORD\tLABEL\n")
-    with open(readFile,'r') as f:
-        for line in f:
-            for word in line.split():
-                 writeFile.write(word +"\t" + label + "\n")
+    with open(writeFile,'w') as w:
+        w.write("WORD\tLABEL\n")
+        with open(readFile,'r') as f:
+            for line in f:
+                for word in line.split():
+                    w.write(word +"\t" + label + "\n")
 
 
 if __name__ == "__main__":
     #Labeling American
-    # create_labels("", "", 1)
 
-    # #Labeling British 
-    # create_labels("", "", 0)
-    print("Hey!")
+    create_labels("rawData/American/2000-Clinton.txt", "americanLabels.txt", "1")
+
+    #Labeling British 
+    #create_labels("", "", 0)
+    
     
