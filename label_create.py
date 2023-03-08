@@ -1,11 +1,12 @@
-"""Named Entity Recognition as a classification task.
+"""
+
+Text Classification For Dialog Recognition on English and American Corpora
 
 Author: Colby Beach, James Gaskell, Kevin Welch and Kristina Streignitz
 
 We affirm that we have carried out my academic endeavors with full
 academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
-Complete this file for part 1 of the project.
 """
 
 
