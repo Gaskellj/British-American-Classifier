@@ -14,7 +14,6 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 # from Project 2.
 
 
-
 ##Helper functions so we don't have to repeat code##
 def get_true_positives(y_pred, y_true):
     truePos = 0
