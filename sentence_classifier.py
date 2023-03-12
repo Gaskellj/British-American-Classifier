@@ -11,6 +11,7 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
 
 from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
 
 import random
 from collections import Counter
@@ -106,13 +107,29 @@ def create_features(sentence, vocab):
     #Given feature
     word_counts = Counter(sentence)
     features.extend([int(word_counts[w] > 0) for w in vocab])
-    
-    #If a british or american spelling or slang appears in the sentence
+    #
+    # #If a british or american spelling or slang appears in the sentence
     features.extend(checkSpellings(sentence))
     features.extend(checkSlang(sentence))
+    features.extend(finalThree(sentence))
 
     return features
 
+def finalThree(sentence):
+    british = 0
+    american = 0
+    for word in sentence.split():
+        finalthree = word[-3:]
+        if finalthree == 'our':
+            british += 1
+        elif finalthree == 'ise':
+            british += 1
+        elif finalthree == 'ize':
+            american += 1
+        elif word[-2:] == 'or':
+            american += 1
+
+    return [british, american]
 
 def checkSlang(sentence):
     british = 0
@@ -143,7 +160,7 @@ if __name__ == "__main__":
     # Create training and development/test set
     training_x, training_y, dev_x, dev_y = create_training_and_dev_sets()
     # Train scikit-learn naive Bayes classifier
-    clf = GaussianNB()
+    clf = SVC()
     clf.fit(training_x, training_y)
     # Evaluate on dev set
 
