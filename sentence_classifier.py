@@ -19,7 +19,24 @@ import os
 
 
 def create_training_and_dev_sets():
+
+
     # Load data
+
+    amerWords = []
+    my_file = open("wordList/AmericanSpelling.txt", "r")
+    data = my_file.read()
+    amerWords.extend(data.split("\n"))
+    my_file.close()
+
+
+    #looping through British data files
+    britWords = []
+    my_file = open("wordList/BritishSpelling.txt", "r")
+    data = my_file.read()
+    britWords.extend(data.split("\n"))
+    my_file.close()
+
 
 
     #looping through American data files
@@ -56,24 +73,48 @@ def create_training_and_dev_sets():
     # Split into training set and development set
     dev_selection = random.sample(range(0, len(sentences)), 500)
     dev_reviews = [sentences[i] for i in dev_selection]
+
+
     training_reviews = [sentences[i] for i in range(len(sentences)) if i not in dev_selection]
-    # Turn reviews into feature representations
-    # features used: for each of the 2000 most common words in the training set,
-    # 1 if the word appears in a review and 0 if it doesn't (i.e. binary naive Bayes)
+
+
     training_word_counts = Counter([w.lower() for review in training_reviews for w in review])
     vocab = [word_count[0] for word_count in training_word_counts.most_common(2000)]
-    training_x = np.array([create_features(r, vocab) for r in training_reviews])
-    dev_x = np.array([create_features(r, vocab) for r in dev_reviews])
+
+    training_x = np.array([create_features(r, vocab, amerWords, britWords) for r in training_reviews])
+    dev_x = np.array([create_features(r, vocab, amerWords, britWords) for r in dev_reviews])
+
     training_y = np.array([labels[i] for i in range(len(labels)) if i not in dev_selection])
     dev_y = np.array([labels[i] for i in dev_selection])
+
     return training_x, training_y, dev_x, dev_y
 
 
-def create_features(words, vocab):
-    word_counts = Counter(words)
-    return [int(word_counts[w] > 0) for w in vocab]
+def create_features(sentence, vocab, amerWords, britWords):
+    features = [] 
+
+    #Given feature
+    word_counts = Counter(sentence)
+    features.extend([int(word_counts[w] > 0) for w in vocab])
+    
+    #If a british or american spelling appears in the sentence
+    features.append(checkSpellings(amerWords, britWords, sentence))
+
+    return features
 
 
+def checkSpellings(amerWords, britWords, sentence):
+    
+    result = 0.5
+    for word in sentence.split():
+        if word in amerWords:
+            result = 1
+            break
+        elif word in britWords:
+            result = 0
+            break
+    
+    return result
 
 
 if __name__ == "__main__":
@@ -83,6 +124,7 @@ if __name__ == "__main__":
     clf = GaussianNB()
     clf.fit(training_x, training_y)
     # Evaluate on dev set
+
     dev_y_predicted = clf.predict(dev_x)
     # For now, just print out the predicted and actual labels:
     for i in range(len(dev_y)):
