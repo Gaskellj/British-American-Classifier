@@ -16,27 +16,38 @@ import numpy as np
 from evaluation import evaluate
 import os
 
+# Load data
+
+amerWords = []
+my_file = open("spellingList/AmericanSpelling.txt", "r")
+data = my_file.read()
+amerWords.extend(data.split("\n"))
+my_file.close()
+
+
+#looping through British data files
+britWords = []
+my_file = open("spellingList/BritishSpelling.txt", "r")
+data = my_file.read()
+britWords.extend(data.split("\n"))
+my_file.close()
+
+amerSlang = []
+my_file = open("slangList/americanSlang.txt", "r")
+data = my_file.read()
+amerWords.extend(data.split("\n"))
+my_file.close()
+
+
+#looping through British data files
+britSlang = []
+my_file = open("slangList/britishSlang.txt", "r")
+data = my_file.read()
+britWords.extend(data.split("\n"))
+my_file.close()
 
 
 def create_training_and_dev_sets():
-
-
-    # Load data
-
-    amerWords = []
-    my_file = open("wordList/AmericanSpelling.txt", "r")
-    data = my_file.read()
-    amerWords.extend(data.split("\n"))
-    my_file.close()
-
-
-    #looping through British data files
-    britWords = []
-    my_file = open("wordList/BritishSpelling.txt", "r")
-    data = my_file.read()
-    britWords.extend(data.split("\n"))
-    my_file.close()
-
 
 
     #looping through American data files
@@ -72,54 +83,64 @@ def create_training_and_dev_sets():
 
     # Split into training set and development set
     dev_selection = random.sample(range(0, len(sentences)), 500)
-    dev_reviews = [sentences[i] for i in dev_selection]
-
+    dev_reviews = [input("Enter a sentence:")]
 
     training_reviews = [sentences[i] for i in range(len(sentences)) if i not in dev_selection]
-
 
     training_word_counts = Counter([w.lower() for review in training_reviews for w in review])
     vocab = [word_count[0] for word_count in training_word_counts.most_common(2000)]
 
-    training_x = np.array([create_features(r, vocab, amerWords, britWords) for r in training_reviews])
-    dev_x = np.array([create_features(r, vocab, amerWords, britWords) for r in dev_reviews])
+    training_x = np.array([create_features(r, vocab) for r in training_reviews])
+    dev_x = np.array([create_features(r, vocab) for r in dev_reviews])
 
     training_y = np.array([labels[i] for i in range(len(labels)) if i not in dev_selection])
-    dev_y = np.array([labels[i] for i in dev_selection])
+    #dev_y = np.array([labels[i] for i in dev_selection])
 
-    return training_x, training_y, dev_x, dev_y
+    return training_x, training_y, dev_x#, dev_y
 
 
-def create_features(sentence, vocab, amerWords, britWords):
+def create_features(sentence, vocab):
     features = [] 
 
     #Given feature
     word_counts = Counter(sentence)
     features.extend([int(word_counts[w] > 0) for w in vocab])
     
-    #If a british or american spelling appears in the sentence
-    features.append(checkSpellings(amerWords, britWords, sentence))
+    #If a british or american spelling or slang appears in the sentence
+    features.extend(checkSpellings(sentence))
+    features.extend(checkSlang(sentence))
 
     return features
 
 
-def checkSpellings(amerWords, britWords, sentence):
-    
-    result = 0.5
+def checkSlang(sentence):
+    british = 0
+    american = 0
     for word in sentence.split():
-        if word in amerWords:
-            result = 1
-            break
-        elif word in britWords:
-            result = 0
-            break
+        if word.title() in amerSlang:
+            american += 1
+        elif word.title() in britSlang:
+            british += 1
     
-    return result
+    return [british, american]
+
+def checkSpellings(sentence):
+    
+    british = 0
+    american = 0
+
+    for word in sentence.split():
+        if word.lower() in amerWords:
+            american += 1
+        elif word.lower() in britWords:
+            british += 1
+    
+    return [british, american]
 
 
 if __name__ == "__main__":
     # Create training and development/test set
-    training_x, training_y, dev_x, dev_y = create_training_and_dev_sets()
+    training_x, training_y, dev_x = create_training_and_dev_sets()
     # Train scikit-learn naive Bayes classifier
     clf = GaussianNB()
     clf.fit(training_x, training_y)
@@ -127,9 +148,13 @@ if __name__ == "__main__":
 
     dev_y_predicted = clf.predict(dev_x)
     # For now, just print out the predicted and actual labels:
-    for i in range(len(dev_y)):
-        print("predicted:", dev_y_predicted[i], " actual:", dev_y[i])
+    # for i in range(len(dev_y)):
+    #     print("predicted:", dev_y_predicted[i], " actual:", dev_y[i])
+
     # After you have completed the code in evaluation.py, you can uncomment the
     # following line to get precision, recall, and f-score for the dev set. The
     # f-measure should be around 80%.
-    print(evaluate(dev_y_predicted, dev_y))
+    # print(evaluate(dev_y_predicted, dev_y))
+
+    if dev_y_predicted[0] == 0 : print("British English!")
+    else: print("American English!")

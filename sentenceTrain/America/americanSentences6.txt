@@ -1,13 +1,9 @@
 PRESIDENT GEORGE W
 BUSH'S ADDRESS BEFORE A JOINT SESSION OF THE CONGRESS ON THE STATE OF THE UNION
-
 January 20, 2004
-
-
 THE PRESIDENT: Mr
 Speaker, Vice President Cheney, members of Congress, distinguished guests, and fellow citizens: America this evening is a nation called to great responsibilities
 And we are rising to meet them
-
 As we gather tonight, hundreds of thousands of American servicemen and women are deployed across the world in the war on terror
 By bringing hope to the oppressed, and delivering justice to the violent, they are making America more secure
 (Applause
@@ -27,7 +23,6 @@ You're raising the standards for our public schools, and you are giving our seni
 )
 We have faced serious challenges together, and now we face a choice: We can go forward with confidence and resolve, or we can turn back to the dangerous illusion that terrorists are not plotting and outlaw regimes are no threat to us
 We can press on with economic growth, and reforms in education and Medicare, or we can turn back to old policies and old divisions
-
 We've not come all this way -- through tragedy, and trial and war -- only to falter and leave our work unfinished
 Americans are rising to the tasks of history, and they expect the same from us
 In their efforts, their enterprise, and their character, the American people are showing that the state of our union is confident and strong
@@ -95,7 +90,6 @@ And America has always been willing to do what it takes for what is right
 Last January, Iraq's only law was the whim of one brutal man
 Today our coalition is working with the Iraqi Governing Council to draft a basic law, with a bill of rights
 We're working with Iraqis and the United Nations to prepare for a transition to full Iraqi sovereignty by the end of June
-
 As democracy takes hold in Iraq, the enemies of freedom will do all in their power to spread violence and fear
 They are trying to shake the will of our country and our friends, but the United States of America will never be intimidated by thugs and assassins
 (Applause
@@ -104,7 +98,6 @@ They are trying to shake the will of our country and our friends, but the United
 )
 Month by month, Iraqis are assuming more responsibility for their own security and their own future
 And tonight we are honored to welcome one of Iraq's most respected leaders: the current President of the Iraqi Governing Council, Adnan Pachachi
-
 Sir, America stands with you and the Iraqi people as you build a free and peaceful nation
 (Applause
 )
@@ -126,7 +119,6 @@ America is committed to keeping the world's most dangerous weapons out of the ha
 When I came to this rostrum on September the 20th, 2001, I brought the police shield of a fallen officer, my reminder of lives that ended, and a task that does not end
 I gave to you and to all Americans my complete commitment to securing our country and defeating our enemies
 And this pledge, given by one, has been kept by many
-
 You in the Congress have provided the resources for our defense, and cast the difficult votes of war and peace
 Our closest allies have been unwavering
 America's intelligence personnel and diplomats have been skilled and tireless
@@ -134,7 +126,6 @@ And the men and women of the American military -- they have taken the hardest du
 We've seen their skill and their courage in armored charges and midnight raids, and lonely hours on faithful watch
 We have seen the joy when they return, and felt the sorrow when one is lost
 I've had the honor of meeting our servicemen and women at many posts, from the deck of a carrier in the Pacific to a mess hall in Baghdad
-
 Many of our troops are listening tonight
 And I want you and your families to know: America is proud of you
 And my administration, and this Congress, will give you the resources you need to fight and win the war on terror
@@ -165,7 +156,6 @@ Some critics have said our duties in Iraq must be internationalized
 This particular criticism is hard to explain to our partners in Britain, Australia, Japan, South Korea, the Philippines, Thailand, Italy, Spain, Poland, Denmark, Hungary, Bulgaria, Ukraine, Romania, the Netherlands -- (applause) -- Norway, El Salvador, and the 17 other countries that have committed troops to Iraq
 (Applause
 ) As we debate at home, we must never ignore the vital contributions of our international partners, or dismiss their sacrifices
-
 From the beginning, America has sought international support for our operations in Afghanistan and Iraq, and we have gained much support
 There is a difference, however, between leading a coalition of many nations, and submitting to the objections of a few
 America will never seek a permission slip to defend the security of our country
@@ -197,7 +187,6 @@ And because you acted to stimulate our economy with tax relief, this economy is 
 (Applause
 )
 You have doubled the child tax credit from $500 to $1,000, reduced the marriage penalty, begun to phase out the death tax, reduced taxes on capital gains and stock dividends, cut taxes on small businesses, and you have lowered taxes for every American who pays income taxes
-
 Americans took those dollars and put them to work, driving this economy forward
 The pace of economic growth in the third quarter of 2003 was the fastest in nearly 20 years; new home construction, the highest in almost 20 years; home ownership rates, the highest ever
 Manufacturing activity is increasing
@@ -214,7 +203,6 @@ America's growing economy is also a changing economy
 As technology transforms the way almost every job is done, America becomes more productive, and workers need new skills
 Much of our job growth will be found in high-skilled fields like health care and biotechnology
 So we must respond by helping more Americans gain the skills to find good jobs in our new economy
-
 All skills begin with the basics of reading and math, which are supposed to be learned in the early grades of our schools
 Yet for too long, for too many children, those skills were never mastered
 By passing the No Child Left Behind Act, you have made the expectation of literacy the law of our country
@@ -243,7 +231,6 @@ I propose larger Pell grants for students who prepare for college with demanding
 ) I do so, so they can train workers for industries that are creating the most new jobs
 By all these actions, we'll help more and more Americans to join in the growing prosperity of our country
 Job training is important, and so is job creation
-
 We must continue to pursue an aggressive, pro-growth economic agenda
 (Applause
 ) Congress has some unfinished business on the issue of taxes
@@ -281,7 +268,6 @@ Tonight, I also ask you to reform our immigration laws so they reflect our value
 I propose a new temporary worker program to match willing foreign workers with willing employers when no Americans can be found to fill the job
 This reform will be good for our economy because employers will find needed workers in an honest and orderly system
 A temporary worker program will help protect our homeland, allowing Border Patrol and law enforcement to focus on true threats to our national security
-
 I oppose amnesty, because it would encourage further illegal immigration, and unfairly reward those who break our laws
 My temporary worker program will preserve the citizenship path for those who respect the law, while bringing millions of hardworking men and women out from the shadows of American life
 (Applause
@@ -298,7 +284,6 @@ By strengthening Medicare and adding a prescription drug benefit, you kept a bas
 )
 Starting this year, under the law you passed, seniors can choose to receive a drug discount card, saving them 10 to 25 percent off the retail price of most prescription drugs -- and millions of low-income seniors can get an additional $600 to buy medicine
 Beginning next year, seniors will have new coverage for preventive screenings against diabetes and heart disease, and seniors just entering Medicare can receive wellness exams
-
 In January of 2006, seniors can get prescription drug coverage under Medicare
 For a monthly premium of about $35, most seniors who do not have that coverage today can expect to see their drug bills cut roughly in half
 Under this reform, senior citizens will be able to keep their Medicare just as it is, or they can choose a Medicare plan that fits them best -- just as you, as members of Congress, can choose an insurance plan that meets your needs
@@ -334,7 +319,6 @@ And they are instilled in us by fundamental institutions, such as families and s
 These institutions, these unseen pillars of civilization, must remain strong in America, and we will defend them
 We must stand with our families to help them raise healthy, responsible children
 When it comes to helping children make right choices, there is work for all of us to do
-
 One of the worst decisions our children can make is to gamble their lives and futures on drugs
 Our government is helping parents confront this problem with aggressive education, treatment, and law enforcement
 Drug use in high school has declined by 11 percent over the last two years
@@ -360,12 +344,10 @@ We will double federal funding for abstinence programs, so schools can teach thi
 )
 Decisions children now make can affect their health and character for the rest of their lives
 All of us -- parents and schools and government -- must work together to counter the negative influence of the culture, and to send the right messages to our children
-
 A strong America must also value the institution of marriage
 I believe we should respect individuals as we take a principled stand for one of the most fundamental, enduring institutions of our civilization
 Congress has already taken a stand on this issue by passing the Defense of Marriage Act, signed in 1996 by President Clinton
 That statute protects marriage under federal law as a union of a man and a woman, and declares that one state may not redefine marriage for other states
-
 Activist judges, however, have begun redefining marriage by court order, without regard for the will of the people and their elected representatives
 On an issue of such great consequence, the people's voice must be heard
 If judges insist on forcing their arbitrary will upon the people, the only alternative left to the people would be the constitutional process
@@ -398,7 +380,6 @@ In grief, we have found the grace to go on
 In challenge, we rediscovered the courage and daring of a free people
 In victory, we have shown the noble aims and good heart of America
 And having come this far, we sense that we live in a time set apart
-
 I've been witness to the character of the people of America, who have shown calm in times of danger, compassion for one another, and toughness for the long haul
 All of us have been partners in a great enterprise
 And even some of the youngest understand that we are living in historic times
@@ -424,7 +405,6 @@ The cause we serve is right, because it is the cause of all mankind
 The momentum of freedom in our world is unmistakable -- and it is not carried forward by our power alone
 We can trust in that greater power who guides the unfolding of the years
 And in all that is to come, we can know that His purposes are just and true
-
 May God continue to bless America
 (Applause
 )
