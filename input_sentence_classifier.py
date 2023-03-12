@@ -84,7 +84,7 @@ def create_training_and_dev_sets():
 
     # Split into training set and development set
     dev_selection = random.sample(range(0, len(sentences)), 500)
-    dev_reviews = [sentences[i] for i in dev_selection]
+    dev_reviews = [input("Enter a sentence:")]
 
     training_reviews = [sentences[i] for i in range(len(sentences)) if i not in dev_selection]
 
@@ -95,9 +95,8 @@ def create_training_and_dev_sets():
     dev_x = np.array([create_features(r, vocab) for r in dev_reviews])
 
     training_y = np.array([labels[i] for i in range(len(labels)) if i not in dev_selection])
-    dev_y = np.array([labels[i] for i in dev_selection])
 
-    return training_x, training_y, dev_x, dev_y
+    return training_x, training_y, dev_x
 
 
 def create_features(sentence, vocab):
@@ -141,7 +140,7 @@ def checkSpellings(sentence):
 
 if __name__ == "__main__":
     # Create training and development/test set
-    training_x, training_y, dev_x, dev_y = create_training_and_dev_sets()
+    training_x, training_y, dev_x = create_training_and_dev_sets()
     # Train scikit-learn naive Bayes classifier
     clf = GaussianNB()
     clf.fit(training_x, training_y)
@@ -149,7 +148,6 @@ if __name__ == "__main__":
 
     dev_y_predicted = clf.predict(dev_x)
 
-    for i in range(len(dev_y)):
-        print("predicted:", dev_y_predicted[i], " actual:", dev_y[i])
 
-    print(evaluate(dev_y_predicted, dev_y))
+    if dev_y_predicted[0] == 0 : print("British English!")
+    else: print("American English!")
