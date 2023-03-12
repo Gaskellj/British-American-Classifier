@@ -10,8 +10,9 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 """
 
 
-#Gets the twitter data and outputs it into its own sentence files
-
+# Function that gets the NLTKT twitter data 
+# and outputs it into its own sentence files just as 
+# the sentence_split.py file does.
 
 from nltk.corpus import twitter_samples
 docs=twitter_samples.docs("tweets.20150430-223406.json")

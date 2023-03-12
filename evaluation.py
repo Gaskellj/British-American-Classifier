@@ -1,11 +1,19 @@
-"""Evaluation Metrics
-
-Author: Kristina Striegnitz and Colby Beach
-
-<HONOR CODE STATEMENT HERE>
-
-Complete this file for part 1 of the project.
 """
+
+Text Classification For Dialog Recognition on English and American Corpora
+
+Author: Colby Beach, James Gaskell, Kevin Welch and Kristina Streignitz
+
+We affirm that we have carried out my academic endeavors with full
+academic honesty. Colby Beach, James Gaskell, Kevin Welch
+
+"""
+
+
+# Classifeir Evaluation Functions that we created 
+# from Project 2.
+
+
 
 ##Helper functions so we don't have to repeat code##
 def get_true_positives(y_pred, y_true):

@@ -9,30 +9,37 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
 """
 
-#File that creates all of our features
+
+
+# This file is our main area to create all of our features
+# to run our classifier. We choose 6 different features as shown below,
+# including one that was given to us by Profesor Streignitz in the movie classification
+# starter code.
 
 from collections import Counter
 
+#Gets all designated American Spellings
 amerWords = []
 my_file = open("spellingList/AmericanSpelling.txt", "r")
 data = my_file.read()
 amerWords.extend(data.split("\n"))
 my_file.close()
 
-
+#Gets all designated British Spellings
 britWords = []
 my_file = open("spellingList/BritishSpelling.txt", "r")
 data = my_file.read()
 britWords.extend(data.split("\n"))
 my_file.close()
 
+#Gets all designated American Slang Words
 amerSlang = []
 my_file = open("slangList/americanSlang.txt", "r")
 data = my_file.read()
 amerWords.extend(data.split("\n"))
 my_file.close()
 
-
+#Gets all designated British Slang Words
 britSlang = []
 my_file = open("slangList/britishSlang.txt", "r")
 data = my_file.read()
@@ -46,8 +53,9 @@ def create_features(sentence, vocab):
     #Given feature from initial movie review classifier 
     word_counts = Counter(sentence)
     features.extend([int(word_counts[w] > 0) for w in vocab])
-    #
-    # #If a british or american spelling or slang appears in the sentence
+    
+
+    #Adding our created features (as defined in the functions below)
     features.extend(checkSpellings(sentence))
     features.extend(checkSlang(sentence))
     features.extend(finalThree(sentence))
@@ -57,7 +65,7 @@ def create_features(sentence, vocab):
     return features
 
 
-# Americans more likely to conjugate words as they are exceedingly dumb
+# We found Americans more likely to conjugate words, therefore more apostrophes could be preent 
 def checkApostraphes(sentence):
     apostrapheCount = 0
     for char in sentence:

@@ -8,6 +8,10 @@ We affirm that we have carried out my academic endeavors with full
 academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
 """
+
+# Splits a .txt file into a new file that creates a 
+# new line for every new sentence.
+
 def split_sentence(readFile, writeFile):
     with open(writeFile,'w') as w:
         with open(readFile,'r') as f:
@@ -17,11 +21,8 @@ def split_sentence(readFile, writeFile):
 
 
 if __name__ == "__main__":
-    #Labeling American
-
+    # Example:
     split_sentence("rawData/American/sorcerer-stone.txt", "sentenceTrain/America/sorcerer-stone.txt")
 
-    #Labeling British 
-    # create_labels("rawData/British/ep-00-02-02.en", "britishSentences.txt", "0")
     
     
