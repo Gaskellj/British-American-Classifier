@@ -1,8 +1,20 @@
+"""
+
+Text Classification For Dialog Recognition on English and American Corpora
+
+Author: Colby Beach, James Gaskell, Kevin Welch and Kristina Streignitz
+
+We affirm that we have carried out my academic endeavors with full
+academic honesty. Colby Beach, James Gaskell, Kevin Welch
+
+"""
+
+
+#Gets the twitter data and outputs it into its own sentence files
+
+
 from nltk.corpus import twitter_samples
 docs=twitter_samples.docs("tweets.20150430-223406.json")
-#select the first five items
-#use for-loop to print each item
-
 
 with open("sentenceTrain/Tweets/British/BritishTweets.txt",'w') as w:
     with open("sentenceTrain/Tweets/American/AmericanTweets.txt",'w') as w2:
