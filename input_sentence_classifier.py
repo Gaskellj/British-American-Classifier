@@ -86,6 +86,7 @@ def create_training_and_dev_sets():
     # Split into training set and development set
     dev_selection = random.sample(range(0, len(sentences)), 500)
     dev_reviews = [input("Enter a sentence:")]
+    print("Predicting...")
 
     training_reviews = [sentences[i] for i in range(len(sentences)) if i not in dev_selection]
 
