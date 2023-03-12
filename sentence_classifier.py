@@ -84,7 +84,7 @@ def create_training_and_dev_sets():
 
 
     # Split into training set and development set
-    dev_selection = random.sample(range(0, len(sentences)), 500)
+    dev_selection = random.sample(range(0, len(sentences)), 2000)
     dev_reviews = [sentences[i] for i in dev_selection]
 
     training_reviews = [sentences[i] for i in range(len(sentences)) if i not in dev_selection]
@@ -112,8 +112,29 @@ def create_features(sentence, vocab):
     features.extend(checkSpellings(sentence))
     features.extend(checkSlang(sentence))
     features.extend(finalThree(sentence))
+    features.append(checkApostraphes(sentence))
+    features.append(checkDoubleChar(sentence))
 
     return features
+
+# Americans more likely to conjugate words as they are exceedingly dumb
+def checkApostraphes(sentence):
+    apostrapheCount = 0
+    for char in sentence:
+        if char == "'":
+            apostrapheCount += 1
+    return apostrapheCount
+
+# British written words tend to contain more double characters due to differences in pronunciation
+def checkDoubleChar(sentence):
+    sentence.split(" ")
+    doubleCharCount = 0
+    for word in sentence:
+        for i in range (0, len(word)-1):
+            if word[i] == word[i+1]:
+                doubleCharCount += 1
+    return doubleCharCount
+
 
 def finalThree(sentence):
     british = 0
