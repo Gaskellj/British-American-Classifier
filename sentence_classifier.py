@@ -8,8 +8,6 @@ We affirm that we have carried out my academic endeavors with full
 academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
 """
-
-
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
@@ -104,7 +102,7 @@ def create_training_and_dev_sets():
 def create_features(sentence, vocab):
     features = [] 
 
-    #Given feature
+    #Given feature from initial movie review classifier 
     word_counts = Counter(sentence)
     features.extend([int(word_counts[w] > 0) for w in vocab])
     #
@@ -186,8 +184,5 @@ if __name__ == "__main__":
     # Evaluate on dev set
 
     dev_y_predicted = clf.predict(dev_x)
-
-    for i in range(len(dev_y)):
-        print("predicted:", dev_y_predicted[i], " actual:", dev_y[i])
 
     print(evaluate(dev_y_predicted, dev_y))
