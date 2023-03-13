@@ -13,7 +13,8 @@ academic honesty. Colby Beach, James Gaskell, Kevin Welch
 |----|-----|
 |table content| table content|
 
-##Data
+## Data
+
 Data containing the State of the Union Address was used for american-dialect training data. 
 This data is available [here](https://www.nltk.org/nltk_data/) under the 40th subsection labelled
 C-Span State of the Union Address Corpus. Another corpus was used for the british-dialect from this 
@@ -30,5 +31,5 @@ and the American version can be found here
 We have decided to provide the sentenceTrain folder containing the data above as the data was not provided in 
 the necessary format. 
 
-##Code
+## Code
 
