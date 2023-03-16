@@ -47,4 +47,18 @@ English.
 british_american_classifier to False and run the code. The classifier will use available data to train and test
 
 
-### [create_features.py](create_features.py)
+### Other Files
+
+1. [create_features.py](create_features.py): Seperate file that holds our functions to create the features for our classifier. 
+
+2. [evaluation.py](evaluation.py): Our evaluation class from Project 2.
+
+3. [twitterProcess.py](twitterProcess.py): Class which gets Twitter Corpus from NLTK and outputs it into its own sentence files just as the sentence_split.py file does.
+
+4. [sentence_split.py](sentence_split.py): Takes a text file and seperates each sentence into a new line in a new file. 
+
+5. slangList directory: Contains lists of common slang words for British vs American English.
+
+6. spellingList directory: Contains lists of common spellings for British vs American English.
+
+7. sentenceTrain directory: Contains our processed data that we used to train / dev. 
