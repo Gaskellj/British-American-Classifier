@@ -33,3 +33,18 @@ the necessary format.
 
 ## Code
 
+### british_american_classifier.py
+
+The british_american_classifier is the main file for this project.
+
+There are 2 ways to run this classifier. 
+
+1. If one is looking to classify a document or segment of text, set the boolean in the main function to True. A prompt
+will appear to enter a sentence. This sentence will be analyzed and classified as either British English or American 
+English. 
+   
+2. To see the evaluation metrics for the dialect classifier, set the boolean in the main function of 
+british_american_classifier to False and run the code. The classifier will use available data to train and test
+
+
+### create_features.py
