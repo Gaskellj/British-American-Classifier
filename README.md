@@ -20,8 +20,7 @@ edition is available [here](https://www.academia.edu/40801338/Bloomsbury_HP_1_Ha
 and the American version can be found here 
 [here](https://www.academia.edu/39183542/J_K_Rowling_HP_1_Harry_Potter_and_the_Sorcerers_Stone). 
 
-We have decided to provide the sentenceTrain folder containing the data above as the data was not provided in 
-the necessary format. 
+We have decided to provide the sentenceTrain folder containing the data above that was proccesed into exactly how we needed it to be to run our classifier. We understand in the project description it was said we shouldn't include publicly avaiable data, but we combined it and processed it in such a way where we thought it would just be easier to submit the processed data so everything can be run smoothly. We are getting all of the data above and splitting it into txt files where each sentence is on a new line.
 
 ## Code
 
