@@ -33,7 +33,7 @@ the necessary format.
 
 ## Code
 
-### [british_american_classifier.py]
+### [british_american_classifier.py](british_american_classifier.py)
 
 The british_american_classifier is the main file for this project.
 
