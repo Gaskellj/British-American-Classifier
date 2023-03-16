@@ -1,6 +1,6 @@
 """
 
-Text Classification For Dialog Recognition on English and American Corpora
+Text Classification For Dialect Recognition on English and American Corpora
 
 Author: Colby Beach, James Gaskell, Kevin Welch and Kristina Streignitz
 
@@ -66,7 +66,7 @@ def create_features(sentence, vocab):
 
 
 # We found Americans more likely to conjugate words, therefore more apostrophes could be preent 
-def checkApostraphes(sentence):
+def checkApostrophes(sentence):
     apostrapheCount = 0
     for char in sentence:
         if char == "'":

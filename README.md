@@ -5,6 +5,14 @@
 We affirm that we have carried out my academic endeavors with full
 academic honesty. Colby Beach, James Gaskell, Kevin Welch
 
+# this is a heading
+## subheading
+### sub-subheading etc
+
+|column1|column2|
+|----|-----|
+|table content| table content|
+
 ## Data
 
 Data containing the State of the Union Address was used for american-dialect training data. 
@@ -20,7 +28,8 @@ edition is available [here](https://www.academia.edu/40801338/Bloomsbury_HP_1_Ha
 and the American version can be found here 
 [here](https://www.academia.edu/39183542/J_K_Rowling_HP_1_Harry_Potter_and_the_Sorcerers_Stone). 
 
-We have decided to provide the sentenceTrain folder containing the data above that was proccesed into exactly how we needed it to be to run our classifier. We understand in the project description it was said we shouldn't include publicly avaiable data, but we combined it and processed it in such a way where we thought it would just be easier to submit the processed data so everything can be run smoothly. We are getting all of the data above and splitting it into txt files where each sentence is on a new line.
+We have decided to provide the sentenceTrain folder containing the data above as the data was not provided in 
+the necessary format. 
 
 ## Code
 
@@ -48,8 +57,8 @@ british_american_classifier to False and run the code. The classifier will use a
 
 4. [sentence_split.py](sentence_split.py): Takes a text file and seperates each sentence into a new line in a new file. 
 
-5. [slangList](slangList) directory: Contains lists of common slang words for British vs American English.
+5. slangList directory: Contains lists of common slang words for British vs American English.
 
-6. [spellingList](spellingList) directory: Contains lists of common spellings for British vs American English.
+6. spellingList directory: Contains lists of common spellings for British vs American English.
 
-7. [sentenceTrain](sentenceTrain) directory: Contains our processed data that we used to train / dev. 
+7. sentenceTrain directory: Contains our processed data that we used to train / dev. 
