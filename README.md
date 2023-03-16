@@ -59,6 +59,6 @@ british_american_classifier to False and run the code. The classifier will use a
 
 5. [slangList](slangList) directory: Contains lists of common slang words for British vs American English.
 
-6. spellingList directory: Contains lists of common spellings for British vs American English.
+6. [spellingList](spellingList) directory: Contains lists of common spellings for British vs American English.
 
-7. sentenceTrain directory: Contains our processed data that we used to train / dev. 
+7. [sentenceTrain](sentenceTrain) directory: Contains our processed data that we used to train / dev. 
