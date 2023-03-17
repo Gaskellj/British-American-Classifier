@@ -112,6 +112,6 @@ def runClassifier(inputTrue):
 if __name__ == "__main__":
     #Use true as a parameter if you want to enter an input
     #Use false as a parameter if you want to see evaluation stats
-    runClassifier(True)
+    runClassifier(False)
 
 

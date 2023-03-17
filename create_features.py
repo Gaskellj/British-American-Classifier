@@ -59,7 +59,7 @@ def create_features(sentence, vocab):
     features.extend(checkSpellings(sentence))
     features.extend(checkSlang(sentence))
     features.extend(finalThree(sentence))
-    features.append(checkApostraphes(sentence))
+    features.append(checkApostrophes(sentence))
     features.append(checkDoubleChar(sentence))
 
     return features
